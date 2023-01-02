@@ -4,6 +4,7 @@ const {
   textResponse,
   notFoundResponse,
 } = require("./utils");
+const Url = require("url");
 
 const users = (req, res) => {
   jsonResponse(res, 200, {
@@ -32,9 +33,16 @@ const notFound = (req, res) => {
   notFoundResponse(res);
 };
 
+const query = (req, res) => {
+  const { url } = req;
+  const { query } = Url.parse(url, true);
+  jsonResponse(res, 200, query);
+};
+
 module.exports = {
   users,
   home,
   about,
   notFound,
+  query,
 };
