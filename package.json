@@ -4,9 +4,12 @@
   "description": "Learning web development with nodejs ",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "repository": "https://github.com/khalidelborai/Learning-NodeJS.git",
   "author": "Khalid Elborai <elboraikhalid@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
