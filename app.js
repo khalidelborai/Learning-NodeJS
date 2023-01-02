@@ -2,13 +2,25 @@
 const http = require("http");
 const Url = require("url");
 
-const { users, home, about, notFound, query } = require("./handlers");
+const {
+  users,
+  home,
+  about,
+  notFound,
+  query,
+  form,
+  postForm,
+  body,
+} = require("./handlers");
 
 const routesMap = {
   "/users": users,
   "/": home,
   "/about": about,
   "/query": query,
+  "/form": form,
+  "/post-form": postForm,
+  "/body": body,
 };
 
 // requestListener is a function that will be called every time a request is made to the server
