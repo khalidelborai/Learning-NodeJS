@@ -1,9 +1,5 @@
-const {
-  jsonResponse,
-  htmlResponse,
-  textResponse,
-  notFoundResponse,
-} = require("./utils");
+const { jsonResponse, htmlResponse, textResponse, notFoundResponse } =
+  require("./utils").default;
 const Url = require("url");
 const querystring = require("querystring");
 
